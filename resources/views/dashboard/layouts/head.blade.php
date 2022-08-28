@@ -7,6 +7,10 @@
 <link rel="stylesheet" href="{{ asset('theme/node_modules/weathericons/css/weather-icons.min.css') }}">
 <link rel="stylesheet" href="{{ asset('theme/node_modules/weathericons/css/weather-icons-wind.min.css') }}">
 <link rel="stylesheet" href="{{ asset('theme/node_modules/summernote/dist/summernote-bs4.css') }}">
+<link rel="stylesheet" href="{{ asset('theme/node_modules/ionicons201/css/ionicons.min.css') }}">
+<link rel="stylesheet" href="{{ asset('theme/node_modules/datatables.net-bs4/css/dataTables.bootstrap4.min.css') }}">
+<link rel="stylesheet" href="{{ asset('theme/node_modules/datatables.net-select-bs4/css/select.bootstrap4.min.css') }}">
+<link rel="stylesheet" href="https://cdn.datatables.net/scroller/2.0.7/css/scroller.bootstrap4.min.css">
 
 <!-- Template CSS -->
 <link rel="stylesheet" href="{{ asset('theme/assets/css/style.css') }}">

@@ -14,9 +14,21 @@
 <script src="{{ asset('theme/node_modules/summernote/dist/summernote-bs4.js') }}"></script>
 <script src="{{ asset('theme/node_modules/chocolat/dist/js/jquery.chocolat.min.js') }}"></script>
 
+<script src="{{ asset('theme/node_modules/datatables/media/js/jquery.dataTables.min.js') }}"></script>
+<script src="{{ asset('theme/node_modules/datatables.net-bs4/js/dataTables.bootstrap4.min.js') }}"></script>
+<script src="{{ asset('theme/node_modules/datatables.net-select-bs4/js/select.bootstrap4.min.js') }}"></script>
+<script src="https://cdn.datatables.net/scroller/2.0.7/js/dataTables.scroller.min.js"></script>
+
 <!-- Template JS File -->
 <script src="{{ asset('theme/assets/js/scripts.js') }}"></script>
 <script src="{{ asset('theme/assets/js/custom.js') }}"></script>
 
 <!-- Page Specific JS File -->
 <script src="{{ asset('theme/assets/js/page/index-0.js') }}"></script>
+<script src="{{ asset('theme/assets/js/page/modules-ion-icons.js') }}"></script>
+
+<script>
+    $(document).ready(function () {
+    $('#myTable').DataTable();
+});
+</script>

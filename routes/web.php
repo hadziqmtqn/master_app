@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\RoleController;
+use App\Http\Controllers\Dashboard\RoleController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CategoryController;
@@ -27,11 +27,15 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::get('/home', function(){
+    return redirect('dashboard');
+})->name('home');
+
 
 Route::group(['middleware' => ['auth']], function() {
-    Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
+    Route::resource('dashboard', DashboardController::class)->except(['create','store','show','edit','update','destroy']);
     Route::resource('roles', RoleController::class);
+    Route::post('getjsonroles', [RoleController::class, 'getJsonRoles'])->name('getjsonroles');
     Route::resource('users', UserController::class);
     Route::resource('products', ProductController::class);
     Route::resource('categories', CategoryController::class);
